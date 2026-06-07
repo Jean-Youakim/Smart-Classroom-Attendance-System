@@ -102,69 +102,6 @@ Overview of the system design and operation workflow.
 - **Outputs**: Q0, Q1, Q2, Q3, GreenLED, OrangeLED, RedLED
 - **Display Output**: Seven-segment encoded pins
 
-## 🚀 Getting Started
-
-### Prerequisites
-- **Altera/Intel Quartus Prime**: Latest version (2020 or newer recommended)
-- **FPGA Development Board**: Compatible with Quartus (e.g., DE2-115, Cyclone IV)
-- **Display Hardware**: 
-  - 7-segment display module (2-digit common cathode or anode)
-  - LED indicators (Red, Orange, Green)
-
-### Installation & Usage
-
-1. **Open Quartus Prime**
-2. **Create New Project** and import BDF files
-3. **Configure I/O Pins**: Map CLOCK, RESET, LEDs, and seven-segment outputs to physical pins
-4. **Compile Design**: Analyze, elaborate, place & route
-5. **Program FPGA**: Download bit file to FPGA board
-6. **Verify Operation**: Test timer, counter, display, and LED indicators
-
-## 🔍 Signal Flow Diagram
-
-```
-┌─────────────┐
-│   CLOCK     │
-└──────┬──────┘
-       │
-       ▼
-    ┌──────────┐
-    │   FSM    │ ◄─── State Control
-    └────┬─────┘
-         │
-    ┌────┴──────┬──────────┐
-    │            │          │
-    ▼            ▼          ▼
-┌─────────┐ ┌────────┐ ┌─────────────┐
-│ Timer   │ │Counter │ │ LED Control │
-└────┬────┘ └────┬───┘ └─────────────┘
-     │           │
-     │           ▼
-     │      ┌──────────┐
-     └─────►│ Display  │
-            │ (7-Seg)  │
-            └──────────┘
-```
-
-## 📝 Design Notes
-
-### Optimization Techniques
-- **Synchronous Design**: All state changes tied to clock for reliability
-- **FSM Architecture**: Clean state management and control flow
-- **Active Low Logic**: Reduces gate count for reset/clear operations
-- **Modular Design**: Independent components for easy testing and reusability
-
-### Key Considerations
-- **Metastability**: External inputs synchronized to internal clock
-- **Power Consumption**: Optimized for FPGA efficiency
-- **Timing Constraints**: Meets standard 50MHz FPGA clock speeds
-
-## 📚 Additional Resources
-
-- **Quartus Documentation**: [Intel Quartus Prime User Guide](https://www.intel.com/content/www/us/en/develop/documentation/quartus-prime-help.html)
-- **FPGA Design Principles**: Digital Logic fundamentals for counter and FSM design
-- **Seven-Segment Displays**: Standard encoding and multiplexing techniques
-
 ## 👥 Project Information
 
 - **Created**: Digital Logic Design Course Project
@@ -176,15 +113,6 @@ Overview of the system design and operation workflow.
 
 This project is provided for educational purposes.
 
-## 🤝 Contributing
-
-This is a course project. For modifications or improvements:
-1. Test all changes thoroughly in simulation
-2. Verify timing constraints
-3. Document any design changes
-4. Validate on hardware before deployment
-
----
 
 **For detailed design explanations, logic equations, schematics, and simulation results, refer to `Logic Final Project.docx`**
 
