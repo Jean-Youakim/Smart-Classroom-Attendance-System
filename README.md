@@ -20,7 +20,7 @@ The Smart Classroom Attendance System is a hardware-based solution that combines
 The system is composed of five main modules working in concert:
 
 ### 1. **FINALLOGIC (10 to 0 Timer)**
-**Location**: `hardware/designs/FINALLOGIC.bdf`
+**Location**: `hardware/modules/FINALLOGIC.bdf`
 
 The core timing module that counts down from 10 to 0, providing the attendance window control mechanism using JK flip-flops and logic gates.
 
