@@ -1,0 +1,31 @@
+# Quartus build files and outputs
+db/
+incremental_db/
+output_files/
+*.o
+*.d
+*.qws
+*.bak
+*.dsbak
+*.qws
+*.rpt
+*.summary
+*.jdi
+*.qdf
+*.dat
+
+# Generated simulation files
+simulation/
+
+# IDE and OS files
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.log
+
+# User-specific files
+*.user
+*.orig

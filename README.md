@@ -1,10 +1,10 @@
 # Smart Classroom Attendance System
 
-A comprehensive **physical digital logic hardware system** designed via schematic block diagrams in **Quartus** to automate and track classroom attendance. This project implements a sophisticated state machine-based attendance tracking mechanism with countdown timer, bidirectional counter, and visual feedback.
+A comprehensive **physical digital logic hardware system** designed via schematic block diagrams in **Quartus** to automate and track classroom attendance. This project implements a sophisticated system combining finite state machines and digital logic design.
 
 ## 📋 Project Overview
 
-The Smart Classroom Attendance System is a hardware-based solution that combines digital logic design principles with finite state machine (FSM) architecture to create an automated attendance tracking mechanism. The system uses FPGA technology to manage student check-ins within a defined time window with LED status indicators and seven-segment display output.
+The Smart Classroom Attendance System is a hardware-based solution that combines digital logic design principles with finite state machine (FSM) architecture to create an automated attendance tracking system.
 
 ### Key Features
 
@@ -20,22 +20,22 @@ The Smart Classroom Attendance System is a hardware-based solution that combines
 The system is composed of five main modules working in concert:
 
 ### 1. **FINALLOGIC (10 to 0 Timer)**
-**File**: `FINALLOGIC.bdf`
+**Location**: `hardware/designs/FINALLOGIC.bdf`
 
 The core timing module that counts down from 10 to 0, providing the attendance window control mechanism using JK flip-flops and logic gates.
 
 ### 2. **Ghady (0-29 Up/Down Counter)**
-**File**: `Ghady.bdf`
+**Location**: `hardware/modules/Ghady.bdf`
 
 An up/down counter that maintains the attendance count from 0 to 29, allowing increments and decrements as students are checked in.
 
 ### 3. **Jason (0-29 to Seven-Segment Converter)**
-**File**: `Jason.bdf`
+**Location**: `hardware/modules/Jason.bdf`
 
 Converts the 5-bit counter output (0-29) into seven-segment display format for visual readout on a 2-digit display.
 
 ### 4. **FSM (Finite State Machine)**
-**File**: `FSM.bdf`
+**Location**: `hardware/modules/FSM.bdf`
 
 Manages system state transitions and controls the overall workflow:
 - **Idle State**: System ready, waiting for start
@@ -44,34 +44,63 @@ Manages system state transitions and controls the overall workflow:
 - **Closed State**: Attendance window closed, counter frozen
 
 ### 5. **Final (Integrated System)**
-**File**: `Final.bdf`
+**Location**: `hardware/designs/Final.bdf`
 
 The complete integrated design combining all modules with clock distribution and synchronization.
 
-## 🔧 Design Files
+## 📁 Project Structure
 
 ```
 Smart-Classroom-Attendance-System/
-├── FINALLOGIC.bdf              # 10→0 Countdown Timer Logic
-├── Ghady.bdf                   # 0-29 Up/Down Counter
-├── Jason.bdf                   # Seven-Segment Display Converter
-├── FSM.bdf                     # Finite State Machine Controller
-├── Final.bdf                   # Integrated System Design
-├── Logic Final Project.docx    # Complete Documentation
-├── Project Presentation.mp4    # Video Presentation
-└── README.md                   # This file
+├── hardware/
+│   ├── modules/                    # Individual component designs
+│   │   ├── FSM.bdf                # Finite State Machine
+│   │   ├── FSM.bsf
+│   │   ├── Jason.bdf              # Seven-Segment Display Converter
+│   │   ├── Jason.bsf
+│   │   ├── Ghady.bdf              # Up/Down Counter
+│   │   ├── UP_DOWN.bsf
+│   │   └── [other component files]
+│   │
+│   ├── designs/                    # Final integrated designs
+│   │   ├── FINALLOGIC.bdf         # 10→0 Countdown Timer
+│   │   ├── FINALLOGIC.bsf
+│   │   ├── Final.bdf              # Integrated System
+│   │   └── [other design files]
+│   │
+│   └── simulation/                 # Simulation and testing
+│       └── Waveform.vwf           # Waveform simulation file
+│
+├── project/                        # Quartus project files
+│   ├── Final.qpf                  # Project file
+│   └── Final.qsf                  # Project settings
+│
+├── documentation/                  # Project documentation
+│   ├── Logic Final Project.docx    # Complete technical documentation
+│   ├── Project Presentation.mp4    # Video presentation
+│   ├── Virtual Breadboard Circuit.txt
+│   └── README.md                   # Documentation guide
+│
+├── .gitignore                      # Git ignore rules
+├── LICENSE                         # MIT License
+└── README.md                       # This file
 ```
+
+## 🔧 Design Files
 
 ### File Types
 
 - **`.bdf`** (Block Diagram Format): Quartus schematic files containing gate-level logic
-- **`.docx`**: Complete project documentation with design explanations, truth tables, and schematics
-- **`.mp4`**: Video presentation of the project design and operation
-- **`.md`**: This README file
+- **`.bsf`** (Block Symbol File): Symbol definitions for schematic blocks
+- **`.qpf`** (Quartus Project File): Project configuration
+- **`.qsf`** (Quartus Settings File): Project settings and assignments
+- **`.vwf`** (Vector Waveform File): Simulation waveforms
+- **`.docx`**: Complete project documentation
+- **`.mp4`**: Video presentation
 
 ## 📖 Documentation
 
-**Main Documentation**: `Logic Final Project.docx`
+**Main Documentation**: `documentation/Logic Final Project.docx`
 
 This file contains:
 - Detailed design methodology and logic equations
@@ -80,7 +109,7 @@ This file contains:
 - Design decisions and optimizations
 - Simulation results and implementation notes
 
-**Video Presentation**: `Project Presentation.mp4`
+**Video Presentation**: `documentation/Project Presentation.mp4`
 
 Overview of the system design and operation workflow.
 
@@ -102,18 +131,29 @@ Overview of the system design and operation workflow.
 - **Outputs**: Q0, Q1, Q2, Q3, GreenLED, OrangeLED, RedLED
 - **Display Output**: Seven-segment encoded pins
 
+## 🚀 Getting Started
+
+1. **Open Project**: Load `project/Final.qpf` in Quartus II
+2. **Review Documentation**: Start with `documentation/Logic Final Project.docx`
+3. **View Schematics**: Open design files in Quartus Block Editor:
+   - Core modules in `hardware/modules/`
+   - Integrated designs in `hardware/designs/`
+4. **Run Simulation**: Use `hardware/simulation/Waveform.vwf` for testing
+
 ## 👥 Project Information
 
 - **Created**: Digital Logic Design Course Project
 - **Language**: Quartus Block Diagram Format (BDF)
 - **Target Platform**: FPGA (Altera/Intel Cyclone series)
 - **Complexity**: Intermediate (Combinational + Sequential Logic with FSM)
+- **Team Members**: Jean-Youakim, Ghady, Jason
 
 ## 📄 License
 
-This project is provided for educational purposes.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## 📞 For More Information
 
-**For detailed design explanations, logic equations, schematics, and simulation results, refer to `Logic Final Project.docx`**
+**For detailed design explanations, logic equations, schematics, and simulation results**, refer to `documentation/Logic Final Project.docx`
 
-**For a video overview of the system, see `Project Presentation.mp4`**
+**For a video overview of the system**, see `documentation/Project Presentation.mp4`
