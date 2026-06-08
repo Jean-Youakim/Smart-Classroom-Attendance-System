@@ -54,19 +54,16 @@ The complete integrated design combining all modules with clock distribution and
 Smart-Classroom-Attendance-System/
 ├── hardware/
 │   ├── modules/                    # Individual component designs
-│   │   ├── FSM.bdf                # Finite State Machine
-│   │   ├── FSM.bsf
-│   │   ├── Jason.bdf              # Seven-Segment Display Converter
-│   │   ├── Jason.bsf
-│   │   ├── Ghady.bdf              # Up/Down Counter
-│   │   ├── UP_DOWN.bsf
+│   │   ├── FSM.bsf                # Finite State Machine
+│   │   ├── Jason.bsf              # Seven-Segment Display Converter
+│   │   ├── UP_DOWN.bsf            # Up/Down Counter
 │   │   └── [other component files]
 │   │
 │   ├── designs/                    # Final integrated designs
 │   │   ├── FINALLOGIC.bdf         # 10→0 Countdown Timer
-│   │   ├── FINALLOGIC.bsf
 │   │   ├── Final.bdf              # Integrated System
-│   │   └── [other design files]
+│   │   └── FSM.bdf
+|   |   └── Ghady.bdf
 │   │
 │   └── simulation/                 # Simulation and testing
 │       └── Waveform.vwf           # Waveform simulation file
@@ -75,11 +72,9 @@ Smart-Classroom-Attendance-System/
 │   ├── Final.qpf                  # Project file
 │   └── Final.qsf                  # Project settings
 │
-├── documentation/                  # Project documentation
-│   ├── Logic Final Project.docx    # Complete technical documentation
-│   ├── Project Presentation.mp4    # Video presentation
-│   ├── Virtual Breadboard Circuit.txt
-│   └── README.md                   # Documentation guide
+│── Logic Final Project.docx    # Complete technical documentation
+│── Project Presentation.mp4    # Video presentation
+│── Virtual Breadboard Circuit.txt
 │
 ├── .gitignore                      # Git ignore rules
 ├── LICENSE                         # MIT License
