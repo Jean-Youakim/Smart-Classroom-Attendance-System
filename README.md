@@ -131,22 +131,12 @@ Overview of the system design and operation workflow.
 - **Outputs**: Q0, Q1, Q2, Q3, GreenLED, OrangeLED, RedLED
 - **Display Output**: Seven-segment encoded pins
 
-## 🚀 Getting Started
-
-1. **Open Project**: Load `project/Final.qpf` in Quartus II
-2. **Review Documentation**: Start with `documentation/Logic Final Project.docx`
-3. **View Schematics**: Open design files in Quartus Block Editor:
-   - Core modules in `hardware/modules/`
-   - Integrated designs in `hardware/designs/`
-4. **Run Simulation**: Use `hardware/simulation/Waveform.vwf` for testing
-
 ## 👥 Project Information
 
-- **Created**: Digital Logic Design Course Project
-- **Language**: Quartus Block Diagram Format (BDF)
+- **Created**: Logic Design Lab Project
 - **Target Platform**: FPGA (Altera/Intel Cyclone series)
 - **Complexity**: Intermediate (Combinational + Sequential Logic with FSM)
-- **Team Members**: Jean-Youakim, Ghady, Jason
+- **Team Members**: Jean Youakim, Ghady Abou Rached, Gabriel Mouannes, Jason Daou
 
 ## 📄 License
 
