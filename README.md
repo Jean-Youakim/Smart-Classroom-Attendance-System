@@ -131,7 +131,7 @@ Overview of the system design and operation workflow.
 - **Created**: Logic Design Lab Project
 - **Target Platform**: FPGA (Altera/Intel Cyclone series)
 - **Complexity**: Intermediate (Combinational + Sequential Logic with FSM)
-- **Team Members**: Jean Youakim, Ghady Abou Rached, Gabriel Mouannes, Jason Daou.
+- **Team Members**: Jean Youakim, Ghady Abou Rached, Gabriel Mouannes, Jason Daou
 
 ## 📄 License
 
