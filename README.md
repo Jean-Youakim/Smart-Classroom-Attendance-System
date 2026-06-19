@@ -126,12 +126,16 @@ Overview of the system design and operation workflow.
 - **Outputs**: Q0, Q1, Q2, Q3, GreenLED, OrangeLED, RedLED
 - **Display Output**: Seven-segment encoded pins
 
-## 👥 Project Information
+---
 
-- **Created**: Logic Design Lab Project
-- **Target Platform**: FPGA (Altera/Intel Cyclone series)
-- **Complexity**: Intermediate (Combinational + Sequential Logic with FSM)
-- **Team Members**: Jean Youakim, Ghady Abou Rached, Gabriel Mouannes, Jason Daou
+## 👥 Team Members
+
+* **Jean Youakim** (@Jean-Youakim)
+* **Gabriel Mouannes** (@gabrielmouannes)
+* **Jason Daou** (@Jasondaou1)
+* **Ghady Abou Rached** (@Ghady1)
+
+---
 
 ## 📄 License
 
