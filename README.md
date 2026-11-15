@@ -13,7 +13,11 @@ The Smart Classroom Attendance System is a hardware-based solution that combines
 - **Seven-Segment Display Interface**: Real-time visualization of count values
 - **LED Status Indicators**: Visual feedback with color-coded LEDs (Green, Orange, Red)
 - **Finite State Machine**: Controls system operation and transitions
-- **FPGA Implementation**: Built entirely on programmable logic using Quartus
+- **Breadboard Build**: Designed and simulated in Quartus, then built by hand on breadboards from 47 74LS-series logic ICs
+
+## 🔩 From Simulation to Hardware
+
+The design was drawn as schematic blocks in Quartus and verified with waveform simulation, then built physically on breadboards using 47 74LS-series chips. The 10-to-0 countdown module is built from JK flip-flops, and physical timing on the board was debugged against the Quartus simulation until the two matched.
 
 ## 🏗️ System Architecture
 
@@ -117,8 +121,8 @@ Overview of the system design and operation workflow.
 - **Synchronous Design**: All operations clock-synchronized
 
 ### Logic Levels
-- **High (1)**: +5V or FPGA high logic
-- **Low (0)**: 0V or FPGA low logic
+- **High (1)**: +5V (TTL logic high)
+- **Low (0)**: 0V (TTL logic low)
 - **Active Low Signals**: PRN, CLRN inputs (inverted logic)
 
 ### Pin Configuration
